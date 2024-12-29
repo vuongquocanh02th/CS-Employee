@@ -1,7 +1,10 @@
 package org.example.casestudyemployee.model;
 import jakarta.persistence.*;
+import java.io.Serializable;
 
-public class Employee {
+@Entity
+@Table(name = "Employee")
+public class Employee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
